@@ -9,6 +9,8 @@ void Level02::LoadContent(ResourceManager& resourceManager)
 	// Setup enemy ships
 	Texture* pTexture = resourceManager.Load<Texture>("Textures\\BioEnemyShip.png");
 
+	
+
 	const int COUNT = 22;
 
 	double xPositions[COUNT] =
@@ -43,6 +45,8 @@ void Level02::LoadContent(ResourceManager& resourceManager)
 		pEnemy->Initialize(position, (float)delay);
 		AddGameObject(pEnemy);
 	}
+
+	SetBackground(resourceManager.Load<Texture>("Textures\\space-background04.png"));
 
 	Level::LoadContent(resourceManager);
 }
